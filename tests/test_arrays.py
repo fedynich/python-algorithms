@@ -1,6 +1,4 @@
-from algorithms.arrays import (
-    swap_positions_v1, swap_positions_v2, swap_positions_v3
-)
+from algorithms.arrays import *
 
 import unittest
 
