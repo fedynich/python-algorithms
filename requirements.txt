@@ -1,0 +1,5 @@
+# Style-checking for PEP8
+flake8
+
+# Run unit tests
+pytest
