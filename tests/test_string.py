@@ -12,8 +12,8 @@ class TestString(unittest.TestCase):
     OUTPUT_V2 = ''
 
     def test_pythonic(self):
-        self.assertEqual(pythonic(self.INPUT_V1), self.OUTPUT_V1)
-        self.assertEqual(pythonic(self.INPUT_V2), self.OUTPUT_V2)
+        self.assertEqual(slicing(self.INPUT_V1), self.OUTPUT_V1)
+        self.assertEqual(slicing(self.INPUT_V2), self.OUTPUT_V2)
 
     def test_built_in_reversed(self):
         self.assertEqual(built_in_reversed(self.INPUT_V1), self.OUTPUT_V1)

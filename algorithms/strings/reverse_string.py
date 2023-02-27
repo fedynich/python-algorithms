@@ -5,8 +5,10 @@ Example:
     return in reversed order: "dlroW olleH"
 """
 
+# core python tools
 
-def pythonic(s):
+
+def slicing(s):
     """
     The best solution
     Reverse by slicing
@@ -32,6 +34,7 @@ def built_in_reverse(s):
 
     return "".join(s)
 
+# manualy
 
 def iterative(s):
     """
@@ -40,8 +43,8 @@ def iterative(s):
 
     result = ""
 
-    for i in range(len(s), 0, -1):
-        result += s[i - 1]
+    for ch in s:
+        result = ch + result
 
     return result
 

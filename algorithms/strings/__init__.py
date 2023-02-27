@@ -1,7 +1,7 @@
 from .reverse_string import *
 
 __all__ = [
-    "pythonic",
+    "slicing",
     "iterative",
     "built_in_reversed",
     "built_in_reverse",
