@@ -8,4 +8,5 @@ __all__ = ["swap_positions_v1",
            "list_comprehension",
            "classic",
            "generate_new_array",
+           "merge_in_place"
            ]

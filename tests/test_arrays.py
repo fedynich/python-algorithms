@@ -49,4 +49,22 @@ class TestMergeTwoSortedLists(unittest.TestCase):
             [1, 3, 4, 5, 9, 14], [2, 6, 7, 8, 10, 11, 12, 13]),
             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 
+    def test_insert(self):
+        self.assertEqual(merge_in_place(
+            [1, 3, 4, 5], [2, 6, 7, 8]),
+            [1, 2, 3, 4, 5, 6, 7, 8])
+
+        self.assertEqual(merge_in_place(
+            [2, 6, 7, 8], [1, 3, 4, 5]),
+            [1, 2, 3, 4, 5, 6, 7, 8])
+
+        self.assertEqual(merge_in_place(
+            [2, 2, 7, 8], [1, 3, 4, 5]),
+            [1, 2, 2, 3, 4, 5, 7, 8])
+
+        self.assertEqual(merge_in_place(
+            [1, 3, 4, 5, 9, 14], [2, 6, 7, 8, 10, 11, 12, 13]),
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+
+
 

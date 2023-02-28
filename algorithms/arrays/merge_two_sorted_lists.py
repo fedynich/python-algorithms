@@ -14,6 +14,10 @@ Example:
 
 
 def generate_new_array(arr1, arr2):
+    """
+    Time Complexity: O(n + m) where n and mare the lengths of the lists
+    """
+
     result = []
     i, j = 0, 0
 
@@ -30,9 +34,35 @@ def generate_new_array(arr1, arr2):
             result.append(arr2[j])
             j += 1
 
+    # Append whatever is left of list2 or list1
     if i == len(arr1) and j < len(arr2):
         result.extend(arr2[j:])
     else:
         result.extend(arr1[i:])
 
     return result
+
+
+def merge_in_place(arr1, arr2):
+    """
+    Time Complexity: O(n + m) where n and mare the lengths of the lists
+    """
+
+    i, j = 0, 0
+
+    # If the current element of list1 is greater
+    # than the current element of list2
+    while i < len(arr1) and j < len(arr2):
+        if arr1[i] > arr2[j]:
+            # insert list2's current index to list1
+            arr1.insert(i, arr2[j])
+            i += 1
+            j += 1
+        else:
+            i += 1
+
+    # Append whatever is left of list2 to list1
+    if j < len(arr2):
+        arr1.extend(arr2[j:])
+
+    return arr1
