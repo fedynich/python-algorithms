@@ -21,7 +21,6 @@ class TestSwapElements(unittest.TestCase):
 
 
 class TestRemoveEvenIntegers(unittest.TestCase):
-
     INPUT_V1 = [2, 7, 11, 15, 2, 6, 2, 15, 8]
     OUTPUT_V1 = [7, 11, 15, 15]
 
@@ -30,4 +29,24 @@ class TestRemoveEvenIntegers(unittest.TestCase):
 
     def test_built_in_remove(self):
         self.assertEqual(classic(self.INPUT_V1), self.OUTPUT_V1)
+
+
+class TestMergeTwoSortedLists(unittest.TestCase):
+    def test_generate_new_array(self):
+        self.assertEqual(generate_new_array(
+            [1, 3, 4, 5], [2, 6, 7, 8]),
+            [1, 2, 3, 4, 5, 6, 7, 8])
+
+        self.assertEqual(generate_new_array(
+            [2, 6, 7, 8], [1, 3, 4, 5]),
+            [1, 2, 3, 4, 5, 6, 7, 8])
+
+        self.assertEqual(generate_new_array(
+            [2, 2, 7, 8], [1, 3, 4, 5]),
+            [1, 2, 2, 3, 4, 5, 7, 8])
+
+        self.assertEqual(generate_new_array(
+            [1, 3, 4, 5, 9, 14], [2, 6, 7, 8, 10, 11, 12, 13]),
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+
 
