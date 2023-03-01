@@ -67,4 +67,18 @@ class TestMergeTwoSortedLists(unittest.TestCase):
             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 
 
+class TestTwoSum(unittest.TestCase):
 
+    def test_bruteforce(self):
+        self.assertEqual(bruteforce([1, 21, 3, 14, 5, 60, 7, 6], sum=81), [21, 60])
+        self.assertEqual(bruteforce([-1, 3, 5], sum=2), [-1, 3])
+
+        self.assertIsNone(bruteforce([1, 1, 1], sum=81))
+        self.assertIsNone(bruteforce([], sum=81))
+
+    def test_hash(self):
+        self.assertEqual(hash([1, 21, 3, 14, 5, 60, 7, 6], sum=81), [21, 60])
+        self.assertEqual(hash([-1, 3, 5], sum=2), [-1, 3])
+
+        self.assertIsNone(hash([1, 1, 1], sum=81))
+        self.assertIsNone(hash([], sum=81))

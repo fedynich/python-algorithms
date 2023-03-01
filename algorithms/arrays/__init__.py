@@ -1,6 +1,7 @@
 from .swap_positions import *
 from .remove_even_integers import *
 from .merge_two_sorted_lists import *
+from .two_sum import *
 
 __all__ = ["swap_positions_v1",
            "swap_positions_v2",
@@ -8,5 +9,7 @@ __all__ = ["swap_positions_v1",
            "list_comprehension",
            "classic",
            "generate_new_array",
-           "merge_in_place"
+           "merge_in_place",
+           "bruteforce",
+           "hash",
            ]
